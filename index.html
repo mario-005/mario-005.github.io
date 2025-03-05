@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Mahasiswa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="/img/logo telkom.png">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="profile-picture">
+            <picture><img src="/img/Mario .jpg" alt="Foto Profil"></picture>
+        </div>
+        <h1>Profil Mahasiswa</h1>
+        
+        <table>
+            <tr>
+                <th>Nama </th> 
+                <td>: Benediktus Mario Laksono</h3></td>
+            </tr>
+            <tr>
+                <th>NIM </th>
+                <td>: 102022300270</h3></td>
+            </tr>
+            <tr>
+                <th>Jurusan </th>
+                <td>: S1 Sistem Informasi</h3></td>
+            </tr>
+        </table>
+        <h4 class="date">
+            Tanggal: <time id="datetime"></time>
+        </h4>
+        
+        <div class="social-icons">
+            <div class="social-item">
+                <a href="https://x.com/i/flow/login" ><img src="/img/logo x.png" alt="X" width="100px"></a>
+                <h5>X</h5>
+            </div>
+            <div class="social-item">
+                <a href="https://github.com/mario-005" ><img src="/img/github.png" alt="Github"></a>
+                <h5>Github</h5>
+            </div>
+            <div class="social-item">
+                <a href="https://www.instagram.com/bmario__/" ><img src="/img/ig.png" alt="Instagram"></a>
+                <h5>Instagram</h5>
+            </div>
+            <div class="social-item">
+                <a href="https://www.facebook.com" ><img src="/img/facebook.png" alt="Facebook" ></a>
+                <h5>Facebook</h5>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateDateTime() {
+            let waktu = new Date();
+            let options = { 
+                day: 'numeric', 
+                month: 'long', 
+                year: 'numeric', 
+                hour: '2-digit', 
+                minute: '2-digit',
+                second: '2-digit'
+            };
+            document.getElementById("datetime").textContent = waktu.toLocaleDateString("id-ID", options) + " WIB";
+        }
+        setInterval(updateDateTime, 1000); 
+        updateDateTime(); 
+    </script>
+</body>
+</html>
